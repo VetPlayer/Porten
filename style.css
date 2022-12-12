@@ -1,0 +1,848 @@
+body {
+  margin: 0;
+  padding-top: 45px;
+  background-color: #000;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* menu */
+
+.wrapper {
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 2;
+}
+
+.header_body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+
+.header_logo {
+  font-family: Post No Bills Jaffna, sans-serif;
+  font-size: 46px;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.header_burger {
+  display: none;
+}
+
+.header_list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  padding-top: 5px;
+}
+
+.header_list li {
+  list-style: none;
+  margin: 0px 0px 0px 20px;
+}
+
+.header_link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header_body {
+    height: 50px;
+  }
+
+  .header_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header_burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header_burger::before,
+  .header_burger::after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header_burger::before {
+    top: 0;
+  }
+
+  .header_burger::after {
+    bottom: 0;
+  }
+
+  .header_burger.active span {
+    transform: scale(0);
+  }
+
+  .header_burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header_burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header_menu {
+    position: fixed;
+    top: -105%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    transition: all 0.3s ease 0s;
+    padding: 70px 10px 20px 10px;
+  }
+
+  .header_menu.active {
+    top: 0;
+  }
+
+  .header_list {
+    display: block;
+  }
+
+  .header_list li {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .header_link {
+    font-size: 24px;
+  }
+}
+
+/* .navbar {
+  position: fixed;
+  transition: top 0.3s;
+  z-index: 10;
+  width: 100%;
+  height: 75px;
+  left: 0;
+  top: 0;
+  background: #0f0f0f;
+}
+
+.navbar .container {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-top: 0;
+}
+
+.navbar-menu li {
+  display: inline-block;
+}
+
+.navbar-menu li a {
+  font-family: PT Sans, sans-serif;
+  color: #969696;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.07s ease-in-out;
+  font-size: 14px;
+  line-height: normal;
+  margin: 12px;
+}
+
+#icons-link {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.navbar-menu li a:hover {
+  color: #c7c7ac;
+}
+
+.navbar-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 10%;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: block;
+  padding: 15px 2px 15px 2px;
+  margin-left: 20%;
+  display: inline-block;
+  margin-right: 1rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background: #1f1f1f;
+} */
+
+/* menu */
+
+/* hero */
+
+.hero {
+  background-image: url(/img/Rectangle-3.png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-block {
+  border: 0.3rem solid #fff;
+  border-radius: 20px;
+  margin: 0% 41%;
+  margin-top: 10%;
+  width: 20%;
+  position: absolute;
+  text-align: center;
+  padding: 2% 0% 3% 0%;
+}
+
+@font-face {
+  font-family: Post No Bills Jaffna; /* Гарнитура шрифта */
+  src: url(fonts/PostNoBillsJaffna-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+.hero-h1 {
+  border-bottom: 2px solid white;
+  width: 72%;
+  margin-left: 15%;
+  font-family: Post No Bills Jaffna, sans-serif;
+  color: white;
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+@font-face {
+  font-family: PT Sans; /* Гарнитура шрифта */
+  src: url(fonts/PT-Sans/PTS55F.ttf); /* Путь к файлу со шрифтом */
+}
+
+.hero-p {
+  font-family: PT Sans, sans-serif;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.hero-text p {
+  color: white;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  width: 46%;
+  margin: 0% 27%;
+  margin-top: 22%;
+  padding-top: 10%;
+  position: absolute;
+}
+
+/* hero */
+
+.newColection {
+  width: 100%;
+  height: 567px;
+  /* background-color: #000; */
+  /* height: 567px; */
+}
+
+.sezonRelojos {
+  width: 55%;
+  left: 0;
+  float: left;
+
+  /* delete */
+  padding-bottom: 51px;
+}
+
+.newCollectionBlock {
+  width: 45%;
+  float: right;
+  right: 0;
+  position: relative;
+}
+
+.newCollectionBlock img {
+  width: 100%;
+  height: auto;
+}
+
+.newCollectionBlock div {
+  position: absolute;
+  top: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.newCollectionBlock h2 {
+  font-family: PT Sans, sans-serif;
+  font-style: Bold;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+}
+
+.newCollectionBlock hr {
+  width: 120px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.newCollectionBlock button {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #f8f9fa;
+  padding: 12px 28px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.newCollectionBlock button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.sezonRelojos h2 {
+  text-align: center;
+  font-family: PT Sans, sans-serif;
+
+  /* Ошибка */
+
+  font-size: 35px;
+  color: #fff;
+  margin-top: 8%;
+}
+
+.sezonRelojos hr {
+  text-align: center;
+  width: 120px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.relojos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reloj img {
+  padding: 45px 20px 45px 20px;
+  margin-bottom: 10px;
+  width: 160px;
+}
+
+.reloj img:hover {
+  background-color: #191b1c;
+  cursor: pointer;
+}
+
+.reloj p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 0.5em;
+}
+
+.collections {
+  width: 100%;
+  height: 466px;
+  /* background-color: #000; */
+  margin: 0;
+}
+
+.collections img {
+  width: 45%;
+  left: 0;
+  float: left;
+}
+
+.collectionBlock {
+  width: 55%;
+  right: 0;
+  float: right;
+}
+
+.collectionBlock h2 {
+  text-align: center;
+  font-family: PT Sans, sans-serif;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  margin-top: 8%;
+}
+
+.collectionBlock hr {
+  text-align: center;
+  width: 120px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.collectionBlock p {
+  font-family: PT Sans sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 21px;
+  width: 55%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.collectionBlock button {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #f8f9fa;
+  padding: 12px 28px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.collectionBlock .btn {
+  text-align: center;
+}
+
+.collectionBlock button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.newPost {
+  /* background-color: #000; */
+  width: 100%;
+}
+
+/* .newPostConteiner {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.newPost h2 {
+  text-align: center;
+  font-family: PT Sans, sans-serif;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding-top: 7%;
+}
+
+.newPost hr {
+  text-align: center;
+  width: 120px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.relojosContainerNP {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.relojosContainerNP2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.relojosNP {
+  margin: 10px;
+}
+
+.relojNP img {
+  padding: 45px 20px 45px 20px;
+  margin-bottom: 10px;
+  width: 160px;
+}
+
+.relojNP img:hover {
+  background-color: #191b1c;
+  cursor: pointer;
+}
+
+.relojNP p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 0.5em;
+}
+
+.brends {
+  background-color: #0f0f0f;
+  width: 100%;
+}
+
+.brendsContainer h2 {
+  text-align: center;
+  font-family: PT Sans, sans-serif;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding-top: 4%;
+}
+
+.brendsContainer hr {
+  text-align: center;
+  width: 120px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.brendsIcon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.brend {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.brend img {
+  width: 200px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url(/img/Rectangle15.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* .bottom div {
+  width: 350px;
+  margin: 40px 15px;
+} */
+
+.sobre,
+.categorias,
+.envio {
+  width: 350px;
+  margin: 40px 15px;
+}
+
+.bottom h3 {
+  font-size: 24px;
+  color: #fff;
+  font-family: PT Sans, sans-serif;
+  line-height: 32px;
+}
+
+.bottom p {
+  font-family: PT Sans, sans-serif;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.categorias button {
+  cursor: pointer;
+  background-color: #0f0f0f;
+  border: none;
+  height: 41px;
+  padding: 10px 20px 10px 20px;
+  margin: 0px 20px 20px 0px;
+  font-family: PT Sans, sans-serif;
+  color: #fff;
+  font-size: 14px;
+}
+
+.categorias button:hover {
+  background-color: #5f5f5f;
+}
+
+.envioBlock {
+  margin-left: 0px;
+}
+
+.envioBlock input {
+  height: 36px;
+  text-align: left;
+  border: none;
+  padding-top: 2px;
+  padding-left: 15px;
+  background-color: #868686;
+  opacity: 0.5;
+  color: rgb(0, 0, 0);
+}
+
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #fff;
+}
+
+.envioBlock button {
+  cursor: pointer;
+  background-color: #0f0f0f;
+  border: none;
+  height: 36px;
+  padding: 10px 20px 30px 20px;
+  font-family: PT Sans, sans-serif;
+  color: #fff;
+  font-size: 14px;
+}
+
+.envioBlock button:hover {
+  background-color: #5f5f5f;
+}
+
+footer {
+  /* background-color: #000; */
+  padding: 10px;
+}
+
+footer p {
+  font-family: PT Sans, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 13%;
+}
+
+@media screen and (max-width: 992px) {
+
+  .header_logo {
+    font-size: 46px;
+    position: relative;
+    z-index: 3;
+    margin-top: 5px;
+  }
+
+  .hero {
+    width: 100%;
+    height: 550px;
+  }
+
+  .hero-block {
+    width: 66%;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin: 20% auto;
+  }
+
+  .hero-h1 {
+    border-bottom: 2px solid white;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin: 5px auto 0px auto;
+    font-size: 54px;
+  }
+
+  .hero-p {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    width: 70%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70%;
+  }
+
+  .sezonRelojos {
+    width: 100%;
+  }
+
+  .sezonRelojos h2 {
+    text-align: center;
+    font-family: PT Sans, sans-serif;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 10%;
+  }
+
+  .relojos {
+    width: 100%;
+    display: block;
+  }
+
+  .reloj {
+    text-align: center;
+  }
+
+  .reloj img {
+    margin-bottom: 2px;
+  }
+
+  .reloj p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 0.5em;
+  }
+
+  .newCollectionBlock {
+    width: 100%;
+  }
+
+  .newCollectionBlock div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .collections img {
+    width: 100%;
+  }
+
+  .collectionBlock {
+    width: 100%;
+  }
+
+  .newCollectionBlock div {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .newPost {
+  }
+  .newPostConteiner {
+  }
+  .sezonLinea {
+  }
+  .relojosContainerNP {
+    display: block;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 70px;
+  }
+
+  .relojosContainerNP2 {
+    display: none;
+  }
+  .relojosNP {
+  }
+  .relojNP {
+  }
+  .rejojImg {
+  }
+
+  .brends {
+  }
+  .brendsContainer {
+    padding-top: 20px;
+    margin-bottom: 0px;
+  }
+  .sezonLinea {
+  }
+  .brendsIcon {
+    display: block;
+    text-align: center;
+    height: 100%;
+  }
+  .brend {
+  }
+
+  .bottom {
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding-top: 5px;
+  }
+  .sobre {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .categorias {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .envio {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .envioBlock {
+  }
+  .colortext {
+  }
+}
