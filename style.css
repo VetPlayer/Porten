@@ -258,7 +258,7 @@ nav a:hover {
 
 @font-face {
   font-family: Post No Bills Jaffna; /* Гарнитура шрифта */
-  src: url(/fonts/PostNoBillsJaffna-Bold.ttf); /* Путь к файлу со шрифтом */
+  src: url(./fonts/PostNoBillsJaffna-Bold.ttf); /* Путь к файлу со шрифтом */
 }
 .hero-h1 {
   border-bottom: 2px solid white;
@@ -273,7 +273,7 @@ nav a:hover {
 
 @font-face {
   font-family: PT Sans; /* Гарнитура шрифта */
-  src: url(/fonts/PT-Sans/PTS55F.ttf); /* Путь к файлу со шрифтом */
+  src: url(./fonts/PT-Sans/PTS55F.ttf); /* Путь к файлу со шрифтом */
 }
 
 .hero-p {
